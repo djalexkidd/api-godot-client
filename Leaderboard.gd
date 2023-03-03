@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	$HTTPRequest.request("http://localhost:3000/api")
+	$HTTPRequest.request("http://localhost:3000/api/test")
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 	var json = JSON.parse(body.get_string_from_utf8())
